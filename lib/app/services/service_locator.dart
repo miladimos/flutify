@@ -1,4 +1,4 @@
-import 'package:fkeleton/app/services/navigator_service.dart';
+import 'package:flutify/app/services/navigator_service.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 

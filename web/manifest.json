@@ -1,6 +1,6 @@
 {
-    "name": "fkeleton",
-    "short_name": "fkeleton",
+    "name": "flutify",
+    "short_name": "flutify",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

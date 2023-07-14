@@ -1,4 +1,4 @@
-# fkeleton
+# flutify
 
 A new Flutter project.
 

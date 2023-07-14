@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:fkeleton/app/pages/splash/controller/splash_page_controller.dart';
+import 'package:flutify/app/pages/splash/controller/splash_page_controller.dart';
 
 class SplashPage extends GetView<SplashPageController> {
   const SplashPage({Key? key}) : super(key: key);

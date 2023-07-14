@@ -1,8 +1,10 @@
-import 'package:fkeleton/app/utils/helpers.dart';
-import 'package:fkeleton/app/utils/translations/translation_controller.dart';
+import 'package:flutify/app/pages/home/ui/widgets/drawer_widget.dart';
+import 'package:flutify/app/pages/home/ui/widgets/list_tile_item_widget.dart';
+import 'package:flutify/app/utils/helpers.dart';
+import 'package:flutify/app/utils/translations/translation_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:fkeleton/app/pages/home/controller/home_page_controller.dart';
+import 'package:flutify/app/pages/home/controller/home_page_controller.dart';
 
 class HomePage extends GetView<HomePageController> {
   const HomePage({Key? key}) : super(key: key);
@@ -12,21 +14,57 @@ class HomePage extends GetView<HomePageController> {
     return WillPopScope(
       onWillPop: null,
       child: SafeArea(
-        child: Scaffold(
-          body: Container(
-            child: Center(
-              child: Column(
-                children: [
-                  Obx(
-                    () => Text(
-                        "current value : ${controller.currentValue.value}"),
+        child: DefaultTabController(
+          length: 5,
+          child: Scaffold(
+            appBar: AppBar(
+              title: const Text("Fluttify"),
+              centerTitle: true,
+              bottom: const TabBar(
+                isScrollable: true,
+                tabs: [
+                  Tab(
+                    text: "UI",
                   ),
-                  ElevatedButton(
-                      onPressed: () => controller.increment(),
-                      child: const Text("Increment"))
+                  Tab(
+                    text: "Widgets",
+                  ),
+                  Tab(
+                    text: "Features",
+                  ),
+                  Tab(
+                    text: "Integrations",
+                  ),
+                  Tab(
+                    text: "Full Apps",
+                  ),
                 ],
               ),
             ),
+            body: SingleChildScrollView(
+              physics: BouncingScrollPhysics(),
+              child: SizedBox(
+                height: MediaQuery.of(context).size.height,
+                child: TabBarView(
+                  children: [
+                    ListView(
+                      children: [
+                        ListTileItemWidget(
+                          title: "Login",
+                          subtitle: "Collection of Login ui",
+                          icon: Icons.login,
+                        ),
+                      ],
+                    ),
+                    Icon(Icons.directions_transit),
+                    Icon(Icons.directions_bike),
+                    Icon(Icons.directions_bike),
+                    Icon(Icons.directions_bike),
+                  ],
+                ),
+              ),
+            ),
+            drawer: const DrawerWidget(),
           ),
         ),
       ),

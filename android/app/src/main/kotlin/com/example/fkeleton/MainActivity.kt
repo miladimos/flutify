@@ -1,4 +1,4 @@
-package com.example.fkeleton
+package com.example.flutify
 
 import io.flutter.embedding.android.FlutterActivity
 

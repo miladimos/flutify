@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:fkeleton/app/utils/app_constants.dart';
+import 'package:flutify/app/utils/app_constants.dart';
 
 class HttpService {
   late Dio _dio;
