@@ -1,6 +1,8 @@
+import 'package:flutify/app/pages/full_apps/bmi_calculator/bmi_calculator.dart';
 import 'package:flutify/app/pages/home/ui/widgets/list_tile_item_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:get/get.dart';
 
 class FullAppsPage extends StatelessWidget {
   FullAppsPage({super.key});
@@ -61,6 +63,12 @@ class FullAppsPage extends StatelessWidget {
         subtitle: "Paint app",
         icon: Icons.login,
         onTap: () => {},
+      ),
+      ListTileItemWidget(
+        title: 'BMI Calculator',
+        subtitle: "BMI Calculator app",
+        icon: Icons.login,
+        onTap: () => Get.to(BMICalculator()),
       ),
     ],
   );
