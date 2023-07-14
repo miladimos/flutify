@@ -9,7 +9,21 @@ class SplashPage extends GetView<SplashPageController> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        child: Center(child: Text("Fluttify")),
+        child: const Center(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "Fluttify",
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              ),
+              CircularProgressIndicator(
+                strokeWidth: 2,
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

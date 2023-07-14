@@ -14,11 +14,14 @@ abstract class _Paths {
 class AppRoutes {
   AppRoutes._();
 
-  static const String initialRoute = _Paths.HOME;
+  static const String initialRoute = _Paths.SPLASH;
 
   static var routes = [
     GetPage(
-        name: _Paths.HOME, page: () => HomePage(), binding: HomePageBinding()),
+      name: _Paths.HOME,
+      page: () => HomePage(),
+      binding: HomePageBinding(),
+    ),
     GetPage(
         name: _Paths.SPLASH,
         page: () => SplashPage(),
