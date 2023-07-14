@@ -1,5 +1,6 @@
 import 'package:flutify/app/pages/home/ui/widgets/drawer_widget.dart';
 import 'package:flutify/app/pages/home/ui/widgets/list_tile_item_widget.dart';
+import 'package:flutify/app/pages/ui/login/login_page.dart';
 import 'package:flutify/app/utils/helpers.dart';
 import 'package:flutify/app/utils/translations/translation_controller.dart';
 import 'package:flutter/material.dart';
@@ -53,6 +54,12 @@ class HomePage extends GetView<HomePageController> {
                           title: "Login",
                           subtitle: "Collection of Login ui",
                           icon: Icons.login,
+                          onTap: () => Get.to(LoginPage()),
+                        ),
+                        ListTileItemWidget(
+                          title: "Register",
+                          subtitle: "Collection of Register ui",
+                          icon: Icons.email_outlined,
                         ),
                       ],
                     ),

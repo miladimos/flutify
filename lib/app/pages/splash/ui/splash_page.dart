@@ -9,7 +9,7 @@ class SplashPage extends GetView<SplashPageController> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        child: Center(child: Text("Splash")),
+        child: Center(child: Text("Fluttify")),
       ),
     );
   }
