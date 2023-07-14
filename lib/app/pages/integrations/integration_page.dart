@@ -85,6 +85,66 @@ class IntegrationPage extends StatelessWidget {
         icon: Icons.login,
         onTap: () => {},
       ),
+      ListTileItemWidget(
+        title: 'Internationalization',
+        subtitle: "Instagram ui clone",
+        icon: Icons.login,
+        onTap: () => {},
+      ),
+      ListTileItemWidget(
+        title: 'URL Luncher',
+        subtitle: "Instagram ui clone",
+        icon: Icons.login,
+        onTap: () => {},
+      ),
+      ListTileItemWidget(
+        title: 'Signature Pad',
+        subtitle: "Instagram ui clone",
+        icon: Icons.login,
+        onTap: () => {},
+      ),
+      ListTileItemWidget(
+        title: 'PDF',
+        subtitle: "Instagram ui clone",
+        icon: Icons.login,
+        onTap: () => {},
+      ),
+      ListTileItemWidget(
+        title: 'RESTfull API',
+        subtitle: "Instagram ui clone",
+        icon: Icons.login,
+        onTap: () => {},
+      ),
+      ListTileItemWidget(
+        title: 'Soap API',
+        subtitle: "Instagram ui clone",
+        icon: Icons.login,
+        onTap: () => {},
+      ),
+      ListTileItemWidget(
+        title: 'Sqflite',
+        subtitle: "Instagram ui clone",
+        icon: Icons.login,
+        onTap: () => {},
+      ),
+      ListTileItemWidget(
+        title: 'Hive',
+        subtitle: "Instagram ui clone",
+        icon: Icons.login,
+        onTap: () => {},
+      ),
+      ListTileItemWidget(
+        title: 'lisar',
+        subtitle: "Instagram ui clone",
+        icon: Icons.login,
+        onTap: () => {},
+      ),
+      ListTileItemWidget(
+        title: 'State Managements',
+        subtitle: "Instagram ui clone",
+        icon: Icons.login,
+        onTap: () => {},
+      ),
     ],
   );
 

@@ -1,7 +1,10 @@
+import 'package:flutify/app/pages/animations/animation_page.dart';
+import 'package:flutify/app/pages/full_apps/full_apps_page.dart';
 import 'package:flutify/app/pages/home/ui/widgets/drawer_widget.dart';
 import 'package:flutify/app/pages/home/ui/widgets/list_tile_item_widget.dart';
 import 'package:flutify/app/pages/integrations/integration_page.dart';
 import 'package:flutify/app/pages/ui/authentication/authentication_page.dart';
+import 'package:flutify/app/pages/widgets/widgets_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutify/app/pages/home/controller/home_page_controller.dart';
@@ -15,7 +18,7 @@ class HomePage extends GetView<HomePageController> {
       onWillPop: null,
       child: SafeArea(
         child: DefaultTabController(
-          length: 6,
+          length: 5,
           child: Scaffold(
             appBar: AppBar(
               title: const Text("Fluttify"),
@@ -28,9 +31,6 @@ class HomePage extends GetView<HomePageController> {
                   ),
                   Tab(
                     text: "Widgets",
-                  ),
-                  Tab(
-                    text: "Features",
                   ),
                   Tab(
                     text: "Animations",
@@ -94,13 +94,18 @@ class HomePage extends GetView<HomePageController> {
                           icon: Icons.email_outlined,
                           onTap: () => {},
                         ),
+                        ListTileItemWidget(
+                          title: "Error",
+                          subtitle: "Collection of Settings ui",
+                          icon: Icons.email_outlined,
+                          onTap: () => {},
+                        ),
                       ],
                     ),
-                    Icon(Icons.directions_transit),
-                    Icon(Icons.directions_bike),
-                    Icon(Icons.directions_bike),
+                    WidgetsPage().listViewItems,
+                    AnimationPage().listViewItems,
                     IntegrationPage().listViewItems,
-                    Icon(Icons.directions_bike),
+                    FullAppsPage().listViewItems,
                   ],
                 ),
               ),

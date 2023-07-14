@@ -5,6 +5,22 @@ class DrawerWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Drawer();
+    return Drawer(
+      child: ListView(
+        padding: EdgeInsets.zero,
+        children: const [
+          ListTile(
+            title: Text("Source Code"),
+            leading: Icon(Icons.source),
+          ),
+          AboutListTile(
+            icon: Icon(Icons.info),
+            child: Text("About Fluttify"),
+            applicationName: 'Fluttify - flutter kit',
+            applicationVersion: '0.1.0',
+          )
+        ],
+      ),
+    );
   }
 }

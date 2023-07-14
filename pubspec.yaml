@@ -13,7 +13,9 @@ dependencies:
     sdk: flutter
 
   get:
-  get_it: 
+  get_it:
+  bloc: 
+  flutter_bloc:  
   get_storage:
   logging:
   url_launcher:
@@ -27,23 +29,20 @@ dependencies:
     sdk: flutter
   intl: any
   device_preview: 
-
-
   cupertino_icons: ^1.0.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: ^0.13.1
 
 
   flutter_lints: ^2.0.0
 
 
 flutter:
-
   uses-material-design: true
 
-  # To add assets to your application, add an assets section, like this:
   assets:
     - assets/
 
@@ -60,3 +59,22 @@ flutter:
   #       - asset: fonts/TrajanPro.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
+
+
+# flutter_launcher_icons:
+#   android: "launcher_icon"
+#   ios: true
+#   image_path: "assets/icon/icon.png"
+#   min_sdk_android: 21 # android min sdk min:16, default 21
+#   web:
+#     generate: true
+#     image_path: "path/to/image.png"
+#     background_color: "#hexcode"
+#     theme_color: "#hexcode"
+#   windows:
+#     generate: true
+#     image_path: "path/to/image.png"
+#     icon_size: 48 # min:48, max:256, default: 48
+#   macos:
+#     generate: true
+#     image_path: "path/to/image.png"
