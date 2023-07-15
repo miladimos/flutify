@@ -1,3 +1,5 @@
+import 'package:flutify/app/pages/full_apps/bmi_calculator/bmi_constants.dart';
+import 'package:flutify/app/pages/full_apps/bmi_calculator/bmi_result.dart';
 import 'package:flutter/material.dart';
 
 const activeCardColor = Color(0xFF1d1E33);
@@ -142,7 +144,7 @@ class _BMICalculatorState extends State<BMICalculator> {
                     child: CardWidget(
                       child: Column(
                         children: [
-                          Text("Weight"),
+                          const Text("Weight"),
                           Text(weight.toString()),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -174,12 +176,30 @@ class _BMICalculatorState extends State<BMICalculator> {
                 ],
               ),
             ),
-            Container(
-              color: Colors.redAccent,
-              margin: EdgeInsets.only(top: 10),
-              width: double.infinity,
-              height: 80,
-            )
+            GestureDetector(
+              onTap: () {
+                BMTCalculate calculator =
+                    BMTCalculate(height: height, weight: weight);
+
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => BMIResult(
+                      bmiResult: calculator.calculateBMI(),
+                      interpretation: calculator.getInterpretation(),
+                      resultText: calculator.getResult(),
+                    ),
+                  ),
+                );
+              },
+              child: Container(
+                color: Colors.redAccent,
+                margin: EdgeInsets.only(top: 10),
+                width: double.infinity,
+                height: 80,
+                child: Text("Result"),
+              ),
+            ),
           ],
         ),
       ),
