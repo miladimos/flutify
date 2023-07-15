@@ -54,7 +54,7 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/
+    - assets/images/shop_bag
 
 
 

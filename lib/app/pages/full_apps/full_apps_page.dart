@@ -1,4 +1,5 @@
 import 'package:flutify/app/pages/full_apps/bmi_calculator/bmi_calculator.dart';
+import 'package:flutify/app/pages/full_apps/shop_bag/shop_bag_page.dart';
 import 'package:flutify/app/pages/home/ui/widgets/list_tile_item_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -15,6 +16,12 @@ class FullAppsPage extends StatelessWidget {
           "Full Apps UI",
           style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
         ),
+      ),
+      ListTileItemWidget(
+        title: 'Shopping Bag',
+        subtitle: "A Shop app for woman bags",
+        icon: Icons.login,
+        onTap: () => Get.to(ShopBagPage()),
       ),
       ListTileItemWidget(
         title: 'Dating',
