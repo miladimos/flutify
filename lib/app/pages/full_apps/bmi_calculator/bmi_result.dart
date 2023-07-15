@@ -39,6 +39,7 @@ class BMIResult extends StatelessWidget {
                     ],
                   ),
                   Padding(
+                    padding: EdgeInsets.all(10),
                     child: Text(interpretation!),
                   ),
                 ],
