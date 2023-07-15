@@ -1,5 +1,6 @@
 import 'package:flutify/app/pages/home/ui/widgets/list_tile_item_widget.dart';
 import 'package:flutify/app/pages/widgets/circular_progressbar.dart';
+import 'package:flutify/app/pages/widgets/clock_page.dart';
 import 'package:flutify/app/pages/widgets/drawers/drawer_with_animation/drawer_with_animation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -21,6 +22,12 @@ class WidgetsPage extends StatelessWidget {
         subtitle: "I",
         icon: Icons.login,
         onTap: () => Get.to(DrawerWithAnimation()),
+      ),
+      ListTileItemWidget(
+        title: 'Clock',
+        subtitle: "I",
+        icon: Icons.login,
+        onTap: () => Get.to(ClockPage()),
       ),
     ],
   );

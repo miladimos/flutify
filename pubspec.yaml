@@ -22,7 +22,7 @@ dependencies:
   animations:
   dio: 
   permission_handler:
-  connectivity_plus:
+  connectivity_plus: ^4.0.1
   shared_preferences:  
   shimmer:
   flutter_localizations:
@@ -30,6 +30,7 @@ dependencies:
   intl: any
   device_preview: 
   cupertino_icons: ^1.0.2
+  percent_indicator: ^4.2.3
 
 dev_dependencies:
   flutter_test:
