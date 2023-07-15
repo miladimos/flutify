@@ -1,6 +1,9 @@
 import 'package:flutify/app/pages/home/ui/widgets/list_tile_item_widget.dart';
+import 'package:flutify/app/pages/integrations/check_internet_connectivity/check_internet_connectivity.dart';
+import 'package:flutify/app/pages/integrations/url_luncher/url_luncher.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:get/get.dart';
 
 class IntegrationPage extends StatelessWidget {
   IntegrationPage({super.key});
@@ -35,7 +38,7 @@ class IntegrationPage extends StatelessWidget {
         title: 'Check Internet Connectivity',
         subtitle: "Instagram ui clone",
         icon: Icons.login,
-        onTap: () => {},
+        onTap: () => Get.to(CheckInternetConnectivity()),
       ),
       ListTileItemWidget(
         title: 'Face ID',
@@ -95,7 +98,7 @@ class IntegrationPage extends StatelessWidget {
         title: 'URL Luncher',
         subtitle: "Instagram ui clone",
         icon: Icons.login,
-        onTap: () => {},
+        onTap: () => Get.to(UrlLuncher()),
       ),
       ListTileItemWidget(
         title: 'Signature Pad',

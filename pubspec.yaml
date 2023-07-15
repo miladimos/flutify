@@ -21,6 +21,7 @@ dependencies:
   url_launcher:
   animations:
   dio: 
+  image_picker:
   permission_handler:
   connectivity_plus: ^4.0.1
   shared_preferences:  
@@ -30,6 +31,14 @@ dependencies:
   intl: any
   device_preview: 
   cupertino_icons: ^1.0.2
+  path:
+  path_provider:
+  flutter_local_notifications: 
+  webview_flutter:
+  auto_size_text:
+  device_info_plus:
+  fl_chart:
+  flutter_svg:
   percent_indicator: ^4.2.3
 
 dev_dependencies:
