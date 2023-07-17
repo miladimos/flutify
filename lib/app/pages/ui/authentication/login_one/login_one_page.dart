@@ -21,6 +21,7 @@ class LoginOnePage extends StatelessWidget {
         body: SafeArea(
           child: Container(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
                   height: 180,
@@ -45,26 +46,95 @@ class LoginOnePage extends StatelessWidget {
                 Container(
                   padding: EdgeInsets.symmetric(horizontal: 40),
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
-                      TextFormField(
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: kMediumBlueColor,
-                        ),
-                        decoration: InputDecoration(
-                          labelText: "Email",
-                          filled: true,
-                          enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10),
-                            borderSide: BorderSide.none,
+                      Container(
+                        margin: EdgeInsets.symmetric(vertical: 5),
+                        child: TextFormField(
+                          style: TextStyle(
+                            fontSize: 14,
+                            color: kMediumBlueColor,
                           ),
-                          focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10),
-                            borderSide: BorderSide(
+                          decoration: InputDecoration(
+                            labelText: "Email",
+                            labelStyle: TextStyle(
+                              color: kMediumBlueColor,
+                            ),
+                            filled: true,
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10),
+                              borderSide: BorderSide.none,
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10),
+                              borderSide: BorderSide(
+                                color: kMediumBlueColor,
+                              ),
+                            ),
+                            prefixIcon: Icon(
+                              Icons.email_outlined,
+                              size: 16,
                               color: kMediumBlueColor,
                             ),
                           ),
-                          prefixIcon: Icon(Icons.email_outlined)
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.symmetric(vertical: 5),
+                        child: TextFormField(
+                          style: TextStyle(
+                            fontSize: 14,
+                            color: kMediumBlueColor,
+                          ),
+                          decoration: InputDecoration(
+                            labelText: "Email",
+                            labelStyle: TextStyle(
+                              color: kMediumBlueColor,
+                            ),
+                            filled: true,
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10),
+                              borderSide: BorderSide.none,
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10),
+                              borderSide: BorderSide(
+                                color: kMediumBlueColor,
+                              ),
+                            ),
+                            prefixIcon: Icon(
+                              Icons.email_outlined,
+                              size: 16,
+                              color: kMediumBlueColor,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(top: 10),
+                        child: Text(
+                          "Forgot Password!",
+                          style: TextStyle(
+                            color: kMediumBlueColor,
+                            fontSize: 15,
+                          ),
+                        ),
+                      ),
+                      Container(
+                        height: 50,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                          color: kMediumBlueColor,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        margin: EdgeInsets.symmetric(vertical: 15),
+                        child: Center(
+                          child: Text(
+                            "Login",
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
+                          ),
                         ),
                       ),
                     ],

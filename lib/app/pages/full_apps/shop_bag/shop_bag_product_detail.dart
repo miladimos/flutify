@@ -113,7 +113,58 @@ class ShopBagProductDetail extends StatelessWidget {
                           ],
                         ),
                       ),
-                      Container(),
+                      Container(
+                        padding: EdgeInsets.symmetric(horizontal: 20),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              product.title,
+                              style: TextStyle(
+                                color: Colors.white,
+                              ),
+                            ),
+                            Text(
+                              product.title,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 30,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Row(
+                              children: [
+                                Column(
+                                  children: [
+                                    Text(
+                                      "price",
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                    Text(
+                                      product.price.toString(),
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                Expanded(
+                                  child: Hero(
+                                    tag: product.id,
+                                    child: Image.asset(product.image, fit: BoxFit.fill,),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
                     ],
                   ),
                 ),
