@@ -1,5 +1,6 @@
 import 'package:flutify/app/pages/home/ui/widgets/list_tile_item_widget.dart';
 import 'package:flutify/app/pages/ui/authentication/login_one/login_one_page.dart';
+import 'package:flutify/app/pages/ui/authentication/login_three/login_three_page.dart';
 import 'package:flutify/app/pages/ui/authentication/login_two/login_two_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -30,6 +31,14 @@ class AuthenticationPage extends StatelessWidget {
             trailing: Icon(Icons.arrow_forward),
             onTap: () => Get.to(
               LoginTwoPage(),
+            ),
+          ),
+          ListTileItemWidget(
+            title: "Login 3",
+            icon: Icons.email_outlined,
+            trailing: Icon(Icons.arrow_forward),
+            onTap: () => Get.to(
+              LoginThreePage(),
             ),
           ),
         ],

@@ -43,6 +43,12 @@ class FullAppsPage extends StatelessWidget {
         onTap: () => Get.to(SignalPage()),
       ),
       ListTileItemWidget(
+        title: 'Covid',
+        subtitle: "Statistics of covid 19",
+        icon: Icons.login,
+        onTap: () => Get.to(SignalPage()),
+      ),
+      ListTileItemWidget(
         title: 'Dating',
         subtitle: "Dating app ui",
         icon: Icons.login,

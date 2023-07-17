@@ -4,7 +4,53 @@ const kWhiteColor = Color(0xffffffff);
 const kMediumBlueColor = Color(0xff4a64fe);
 
 class LoginOnePage extends StatelessWidget {
-  const LoginOnePage({super.key});
+  LoginOnePage({super.key});
+
+  final GlobalKey<FormState> _formKey = GlobalKey();
+
+  Widget inputWidget({
+    required String hintText,
+    required IconData prefixIcon,
+    bool obscureText = false,
+    var validator,
+    var onSaved,
+  }) {
+    return Container(
+      margin: const EdgeInsets.symmetric(vertical: 5),
+      child: TextFormField(
+        validator: validator,
+        onSaved: onSaved,
+        style: TextStyle(
+          fontSize: 14,
+          color: kMediumBlueColor,
+        ),
+        decoration: InputDecoration(
+          labelText: hintText,
+          labelStyle: TextStyle(
+            color: kMediumBlueColor,
+          ),
+          filled: true,
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10),
+            borderSide: BorderSide.none,
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10),
+            borderSide: BorderSide(
+              color: kMediumBlueColor,
+            ),
+          ),
+          prefixIcon: Icon(
+            prefixIcon,
+            size: 16,
+            color: kMediumBlueColor,
+          ),
+        ),
+        obscureText: obscureText,
+
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -44,100 +90,60 @@ class LoginOnePage extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.symmetric(horizontal: 40),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
-                      Container(
-                        margin: EdgeInsets.symmetric(vertical: 5),
-                        child: TextFormField(
-                          style: TextStyle(
-                            fontSize: 14,
-                            color: kMediumBlueColor,
-                          ),
-                          decoration: InputDecoration(
-                            labelText: "Email",
-                            labelStyle: TextStyle(
-                              color: kMediumBlueColor,
-                            ),
-                            filled: true,
-                            enabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(10),
-                              borderSide: BorderSide.none,
-                            ),
-                            focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(10),
-                              borderSide: BorderSide(
-                                color: kMediumBlueColor,
-                              ),
-                            ),
-                            prefixIcon: Icon(
-                              Icons.email_outlined,
-                              size: 16,
-                              color: kMediumBlueColor,
-                            ),
-                          ),
+                  padding: const EdgeInsets.symmetric(horizontal: 40),
+                  child: Form(
+                    key: _formKey,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        inputWidget(
+                          hintText: "Email",
+                          prefixIcon: Icons.mail_outline,
+                          validator: (String? value) {
+                            if(value!.isEmpty) return "enter email";
+                          }
                         ),
-                      ),
-                      Container(
-                        margin: EdgeInsets.symmetric(vertical: 5),
-                        child: TextFormField(
-                          style: TextStyle(
-                            fontSize: 14,
-                            color: kMediumBlueColor,
-                          ),
-                          decoration: InputDecoration(
-                            labelText: "Email",
-                            labelStyle: TextStyle(
-                              color: kMediumBlueColor,
-                            ),
-                            filled: true,
-                            enabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(10),
-                              borderSide: BorderSide.none,
-                            ),
-                            focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(10),
-                              borderSide: BorderSide(
-                                color: kMediumBlueColor,
-                              ),
-                            ),
-                            prefixIcon: Icon(
-                              Icons.email_outlined,
-                              size: 16,
-                              color: kMediumBlueColor,
-                            ),
-                          ),
+                        inputWidget(
+                          hintText: "Password",
+                          prefixIcon: Icons.lock,
+                          obscureText: true,
                         ),
-                      ),
-                      Container(
-                        margin: EdgeInsets.only(top: 10),
-                        child: Text(
-                          "Forgot Password!",
-                          style: TextStyle(
-                            color: kMediumBlueColor,
-                            fontSize: 15,
-                          ),
-                        ),
-                      ),
-                      Container(
-                        height: 50,
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          color: kMediumBlueColor,
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        margin: EdgeInsets.symmetric(vertical: 15),
-                        child: Center(
-                          child: Text(
-                            "Login",
+                        Container(
+                          margin: const EdgeInsets.only(top: 10),
+                          child: const Text(
+                            "Forgot Password!",
                             style: TextStyle(
-                              color: Colors.white,
+                              color: kMediumBlueColor,
+                              fontSize: 15,
                             ),
                           ),
                         ),
-                      ),
-                    ],
+                        GestureDetector(
+                          onTap: () {
+                            if(_formKey.currentState!.validate()) {
+                              _formKey.currentState!.save();
+                            }
+                          },
+                          child: Container(
+                            height: 50,
+                            width: double.infinity,
+                            decoration: BoxDecoration(
+                              color: kMediumBlueColor,
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            margin: EdgeInsets.symmetric(vertical: 15),
+                            child: Center(
+                              child: Text(
+                                "Login",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],
