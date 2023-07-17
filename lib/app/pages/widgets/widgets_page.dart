@@ -13,19 +13,16 @@ class WidgetsPage extends StatelessWidget {
     children: [
       ListTileItemWidget(
         title: 'Progress Bars',
-        subtitle: "I",
         icon: Icons.login,
         onTap: () => Get.to(CircularProgressbar()),
       ),
       ListTileItemWidget(
         title: 'Slide bars',
-        subtitle: "I",
         icon: Icons.login,
         onTap: () => Get.to(DrawerWithAnimation()),
       ),
       ListTileItemWidget(
         title: 'Clock',
-        subtitle: "I",
         icon: Icons.login,
         onTap: () => Get.to(ClockPage()),
       ),

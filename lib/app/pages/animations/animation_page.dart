@@ -9,7 +9,7 @@ class AnimationPage extends StatelessWidget {
     children: [
       ListTileItemWidget(
         title: 'River',
-        subtitle: "Instagram ui clone",
+        subtitle: "Use river animations in flutter",
         icon: Icons.login,
         onTap: () => {},
       ),
