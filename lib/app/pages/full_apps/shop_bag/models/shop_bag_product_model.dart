@@ -19,7 +19,7 @@ class SHBProductModel {
 List<SHBProductModel> products = [
   SHBProductModel(
     title: "Product 1",
-    description: "Product 1 description",
+    description: "Product 1 description Product 1 description Product 1 description Product 1 description Product 1 description Product 1 description",
     image: "assets/images/shop_bag/bag_1.png",
     id: 1,
     price: 140,

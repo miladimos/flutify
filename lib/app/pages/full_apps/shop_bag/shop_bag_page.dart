@@ -1,5 +1,7 @@
 import 'package:flutify/app/pages/full_apps/shop_bag/models/shop_bag_product_model.dart';
 import 'package:flutify/app/pages/full_apps/shop_bag/shop_bag_constansts.dart';
+import 'package:flutify/app/pages/full_apps/shop_bag/shop_bag_product_detail.dart';
+import 'package:flutify/app/pages/full_apps/shop_bag/widgets/appbar.dart';
 import 'package:flutter/material.dart';
 
 class ShopBagPage extends StatelessWidget {
@@ -18,33 +20,7 @@ class ShopBagPage extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.white,
-          elevation: 0,
-          leading: IconButton(
-            icon: Icon(
-              Icons.arrow_back,
-              color: kSHBTextColor,
-            ),
-            onPressed: null,
-          ),
-          actions: [
-            IconButton(
-              icon: Icon(
-                Icons.search,
-                color: kSHBTextColor,
-              ),
-              onPressed: null,
-            ),
-            IconButton(
-              icon: Icon(
-                Icons.shopping_basket,
-                color: kSHBTextColor,
-              ),
-              onPressed: null,
-            )
-          ],
-        ),
+        appBar: SHBAppbar(context),
         body: Container(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -112,37 +88,42 @@ class ShopBagPage extends StatelessWidget {
                         childAspectRatio: 0.75),
                     itemCount: products.length,
                     itemBuilder: (context, index) {
-                      return Container(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Expanded(
-                              child: Container(
-                                padding: EdgeInsets.all(5),
-                                decoration: BoxDecoration(
-                                  color: products[index].color,
-                                  borderRadius: BorderRadius.circular(8),
+                      return GestureDetector(
+                        onTap: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => ShopBagProductDetail(product: products[index],)));
+                        },
+                        child: Container(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Expanded(
+                                child: Container(
+                                  padding: EdgeInsets.all(5),
+                                  decoration: BoxDecoration(
+                                    color: products[index].color,
+                                    borderRadius: BorderRadius.circular(8),
+                                  ),
+                                  child: Hero(
+                                    tag: "{$products[index].id}",
+                                    child: Image.asset(
+                                        "assets/images/shop_bag/bag_2.png"),
+                                  ),
                                 ),
-                                child: Hero(
-                                  tag: "{$products[index].id}",
-                                  child: Image.asset(
-                                      "assets/images/shop_bag/bag_2.png"),
+                              ),
+                              Container(
+                                child: Text(
+                                  products[index].title,
+                                  style: TextStyle(color: kSHBTextColorLight),
                                 ),
                               ),
-                            ),
-                            Container(
-                              child: Text(
-                                products[index].title,
-                                style: TextStyle(color: kSHBTextColorLight),
+                              Container(
+                                child: Text(
+                                  products[index].price.toString(),
+                                  style: TextStyle(color: kSHBTextColor),
+                                ),
                               ),
-                            ),
-                            Container(
-                              child: Text(
-                                products[index].price.toString(),
-                                style: TextStyle(color: kSHBTextColor),
-                              ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       );
                     },
