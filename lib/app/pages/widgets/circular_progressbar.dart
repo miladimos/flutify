@@ -9,7 +9,7 @@ class CircularProgressbar extends StatefulWidget {
 }
 
 class _CircularProgressbarState extends State<CircularProgressbar> {
-  double _to = 60;
+  double _to = 100;
   @override
   Widget build(BuildContext context) {
     return Scaffold(

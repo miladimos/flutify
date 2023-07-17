@@ -45,7 +45,7 @@ class HomePage extends GetView<HomePageController> {
               ),
             ),
             body: SingleChildScrollView(
-              // physics: BouncingScrollPhysics(),
+              // physics: ClampingScrollPhysics(),
               child: SizedBox(
                 height: MediaQuery.of(context).size.height,
                 child: TabBarView(

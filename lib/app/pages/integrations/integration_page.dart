@@ -1,5 +1,18 @@
 import 'package:flutify/app/pages/home/ui/widgets/list_tile_item_widget.dart';
+import 'package:flutify/app/pages/integrations/barcode/barcode_page.dart';
 import 'package:flutify/app/pages/integrations/check_internet_connectivity/check_internet_connectivity.dart';
+import 'package:flutify/app/pages/integrations/databases/databases_page.dart';
+import 'package:flutify/app/pages/integrations/face_id/face_id_page.dart';
+import 'package:flutify/app/pages/integrations/fingerprint/fingerprint_page.dart';
+import 'package:flutify/app/pages/integrations/firebase/firebase_page.dart';
+import 'package:flutify/app/pages/integrations/internationalization/internationalization_page.dart';
+import 'package:flutify/app/pages/integrations/local_notifications/local_notification_page.dart';
+import 'package:flutify/app/pages/integrations/multiple_theme/multiple_theme_page.dart';
+import 'package:flutify/app/pages/integrations/oauth/oauth_page.dart';
+import 'package:flutify/app/pages/integrations/pdf/pdf_page.dart';
+import 'package:flutify/app/pages/integrations/qrcode/qrcode_page.dart';
+import 'package:flutify/app/pages/integrations/signature_pad/signature_pad_page.dart';
+import 'package:flutify/app/pages/integrations/supabase/supabase_page.dart';
 import 'package:flutify/app/pages/integrations/url_luncher/url_luncher.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -11,22 +24,40 @@ class IntegrationPage extends StatelessWidget {
   final ListView listViewItems = ListView(
     children: [
       ListTileItemWidget(
+        title: 'Check Internet Connectivity',
+        subtitle: "Connection Statuses",
+        icon: Icons.network_check,
+        onTap: () => Get.to(CheckInternetConnectivity()),
+      ),
+      ListTileItemWidget(
+        title: 'URL Luncher',
+        subtitle: "Lunch external links",
+        icon: Icons.link,
+        onTap: () => Get.to(UrlLuncher()),
+      ),
+      ListTileItemWidget(
+        title: 'Databases',
+        subtitle: "Sqflite, Hive, Lisar, ...",
+        icon: Icons.login,
+        onTap: () => Get.to(DatabasesPage()),
+      ),
+      ListTileItemWidget(
         title: "Firebase",
         subtitle: "Notes app",
         icon: Icons.login,
-        onTap: () => {},
+        onTap: () => Get.to(FirebasePage()),
       ),
       ListTileItemWidget(
         title: 'Supabase',
         subtitle: "Instagram ui clone",
         icon: Icons.login,
-        onTap: () => {},
+        onTap: () => Get.to(SupabasePage()),
       ),
       ListTileItemWidget(
         title: 'Local Notifications',
         subtitle: "Instagram ui clone",
         icon: Icons.login,
-        onTap: () => {},
+        onTap: () => Get.to(LocalNotificationPage()),
       ),
       ListTileItemWidget(
         title: 'Push Notifications',
@@ -35,82 +66,58 @@ class IntegrationPage extends StatelessWidget {
         onTap: () => {},
       ),
       ListTileItemWidget(
-        title: 'Check Internet Connectivity',
-        subtitle: "Instagram ui clone",
-        icon: Icons.login,
-        onTap: () => Get.to(CheckInternetConnectivity()),
-      ),
-      ListTileItemWidget(
         title: 'Face ID',
         subtitle: "Instagram ui clone",
         icon: Icons.login,
-        onTap: () => {},
+        onTap: () => Get.to(FaceIdPage()),
       ),
       ListTileItemWidget(
         title: 'Fingerprint',
         subtitle: "Instagram ui clone",
         icon: Icons.login,
-        onTap: () => {},
+        onTap: () => Get.to(FingerprintPage()),
       ),
       ListTileItemWidget(
         title: 'Barcode',
         subtitle: "Instagram ui clone",
         icon: Icons.login,
-        onTap: () => {},
+        onTap: () => BarcodePage(),
       ),
       ListTileItemWidget(
         title: 'QRCode',
         subtitle: "Instagram ui clone",
         icon: Icons.login,
-        onTap: () => {},
+        onTap: () => Get.to(QrCodePage()),
       ),
       ListTileItemWidget(
-        title: 'Github OAuth',
-        subtitle: "Instagram ui clone",
+        title: 'OAuth Authentication',
+        subtitle: "with Google, Github, Gitlab",
         icon: Icons.login,
-        onTap: () => {},
-      ),
-      ListTileItemWidget(
-        title: 'Gitlab OAuth',
-        subtitle: "Instagram ui clone",
-        icon: Icons.login,
-        onTap: () => {},
-      ),
-      ListTileItemWidget(
-        title: 'Google OAuth',
-        subtitle: "Instagram ui clone",
-        icon: Icons.login,
-        onTap: () => {},
+        onTap: () => Get.to(OauthPage()),
       ),
       ListTileItemWidget(
         title: 'Multiple Theme',
         subtitle: "Instagram ui clone",
         icon: Icons.login,
-        onTap: () => {},
+        onTap: () => Get.to(MultipleThemePage()),
       ),
       ListTileItemWidget(
         title: 'Internationalization',
         subtitle: "Instagram ui clone",
         icon: Icons.login,
-        onTap: () => {},
-      ),
-      ListTileItemWidget(
-        title: 'URL Luncher',
-        subtitle: "Instagram ui clone",
-        icon: Icons.login,
-        onTap: () => Get.to(UrlLuncher()),
+        onTap: () => Get.to(InternationalizationPage()),
       ),
       ListTileItemWidget(
         title: 'Signature Pad',
         subtitle: "Instagram ui clone",
         icon: Icons.login,
-        onTap: () => {},
+        onTap: () => Get.to(SignaturePadPage()),
       ),
       ListTileItemWidget(
         title: 'PDF',
         subtitle: "Instagram ui clone",
         icon: Icons.login,
-        onTap: () => {},
+        onTap: () => Get.to(PDFPage()),
       ),
       ListTileItemWidget(
         title: 'RESTfull API',
@@ -125,26 +132,8 @@ class IntegrationPage extends StatelessWidget {
         onTap: () => {},
       ),
       ListTileItemWidget(
-        title: 'Sqflite',
-        subtitle: "Instagram ui clone",
-        icon: Icons.login,
-        onTap: () => {},
-      ),
-      ListTileItemWidget(
-        title: 'Hive',
-        subtitle: "Instagram ui clone",
-        icon: Icons.login,
-        onTap: () => {},
-      ),
-      ListTileItemWidget(
-        title: 'lisar',
-        subtitle: "Instagram ui clone",
-        icon: Icons.login,
-        onTap: () => {},
-      ),
-      ListTileItemWidget(
         title: 'State Managements',
-        subtitle: "Instagram ui clone",
+        subtitle: "Provider, Reverpod, bloC, ",
         icon: Icons.login,
         onTap: () => {},
       ),
