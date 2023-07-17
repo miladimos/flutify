@@ -27,7 +27,7 @@ class HomePage extends GetView<HomePageController> {
                 isScrollable: true,
                 tabs: [
                   Tab(
-                    text: "UI",
+                    text: "Screen List",
                   ),
                   Tab(
                     text: "Widgets",
@@ -71,32 +71,26 @@ class HomePage extends GetView<HomePageController> {
                           onTap: () => {},
                         ),
                         ListTileItemWidget(
-                          title: "Settings",
-                          subtitle: "Collection of Settings ui",
-                          icon: Icons.email_outlined,
-                          onTap: () => {},
-                        ),
-                        ListTileItemWidget(
                           title: "Dashboard",
-                          subtitle: "Collection of Settings ui",
+                          subtitle: "Collection of Dashboard ui",
                           icon: Icons.email_outlined,
                           onTap: () => {},
                         ),
                         ListTileItemWidget(
                           title: "Onboarding",
-                          subtitle: "Collection of Settings ui",
+                          subtitle: "Collection of Onboarding ui",
                           icon: Icons.email_outlined,
                           onTap: () => {},
                         ),
                         ListTileItemWidget(
                           title: "Splash",
-                          subtitle: "Collection of Settings ui",
+                          subtitle: "Collection of Splash ui",
                           icon: Icons.email_outlined,
                           onTap: () => {},
                         ),
                         ListTileItemWidget(
                           title: "Error",
-                          subtitle: "Collection of Settings ui",
+                          subtitle: "Collection of Errors ui",
                           icon: Icons.email_outlined,
                           onTap: () => {},
                         ),

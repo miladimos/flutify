@@ -13,6 +13,11 @@ class DrawerWidget extends StatelessWidget {
             title: Text("Source Code"),
             leading: Icon(Icons.source),
           ),
+          ListTile(
+            title: Text("Dark theme"),
+            leading: Icon(Icons.light_mode),
+            trailing: Switch(value: false, onChanged: null),
+          ),
           AboutListTile(
             icon: Icon(Icons.info),
             child: Text("About Fluttify"),

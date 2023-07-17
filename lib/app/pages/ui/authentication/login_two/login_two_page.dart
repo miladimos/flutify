@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class WhatsappPage extends StatefulWidget {
-  const WhatsappPage({super.key});
+class LoginTwoPage extends StatefulWidget {
+  const LoginTwoPage({super.key});
 
   @override
-  State<WhatsappPage> createState() => _WhatsappPageState();
+  State<LoginTwoPage> createState() => _LoginTwoPageState();
 }
 
-class _WhatsappPageState extends State<WhatsappPage> {
+class _LoginTwoPageState extends State<LoginTwoPage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
