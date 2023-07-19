@@ -40,6 +40,8 @@ dependencies:
   fl_chart:
   flutter_svg:
   percent_indicator: ^4.2.3
+  flutter_screenutil:
+  sleek_circular_slider:
 
 dev_dependencies:
   flutter_test:
