@@ -57,6 +57,7 @@ flutter:
 
   assets:
     - assets/images/
+    - assets/images/login_five/background.jpg
 
 
 
