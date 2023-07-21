@@ -39,6 +39,7 @@ class _LoginFivePageState extends State<LoginFivePage> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+
         body: SafeArea(
           child: AnnotatedRegion(
             value: SystemUiOverlayStyle.light,
@@ -113,7 +114,8 @@ class _LoginFivePageState extends State<LoginFivePage> {
                                   children: [
                                     Theme(
                                       data: ThemeData(
-                                          unselectedWidgetColor: Colors.white),
+                                        unselectedWidgetColor: Colors.white,
+                                      ),
                                       child: Checkbox(
                                         value: true,
                                         checkColor: Colors.green,

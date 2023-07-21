@@ -13,7 +13,7 @@ import 'package:flutify/app/pages/integrations/pdf/pdf_page.dart';
 import 'package:flutify/app/pages/integrations/qrcode/qrcode_page.dart';
 import 'package:flutify/app/pages/integrations/signature_pad/signature_pad_page.dart';
 import 'package:flutify/app/pages/integrations/supabase/supabase_page.dart';
-import 'package:flutify/app/pages/integrations/url_luncher/url_luncher.dart';
+import 'package:flutify/app/pages/integrations/url_luncher/url_launcher.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
@@ -33,7 +33,7 @@ class IntegrationPage extends StatelessWidget {
         title: 'URL Luncher',
         subtitle: "Lunch external links",
         icon: Icons.link,
-        onTap: () => Get.to(UrlLuncher()),
+        onTap: () => Get.to(UrlLauncher()),
       ),
       ListTileItemWidget(
         title: 'Databases',
