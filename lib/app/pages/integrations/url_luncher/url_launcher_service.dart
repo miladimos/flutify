@@ -1,7 +1,7 @@
 import 'package:url_launcher/url_launcher.dart';
+import 'dart:io';
 
-class UrlLauncherService
-{
+class UrlLauncherService {
   static Future openWebUrl(Uri url) async {
     if (await canLaunchUrl(url)) {
       await launchUrl(url);
@@ -11,19 +11,16 @@ class UrlLauncherService
   }
 
   dynamic launchBrowser() async {
-    try
-    {
-      Uri email = Uri(
-          scheme: 'https',
-          path: "www.github.com/mustafatahirhussein"
-      );
+    try {
+      Uri email =
+          Uri(scheme: 'https', path: "www.github.com/mustafatahirhussein");
 
-      await u.launchUrl(email);
-    }
-    catch(e) {
-      debugPrint(e.toString());
+      await launchUrl(email);
+    } catch (e) {
+      print(e.toString());
     }
   }
+
   Future<void> _launchInBrowser(Uri url) async {
     if (!await launchUrl(
       url,
@@ -45,17 +42,15 @@ class UrlLauncherService
   }
 
   dynamic launchSms() async {
-    try
-    {
+    try {
       Uri email = Uri(
         scheme: 'sms',
         path: "+1234567890",
       );
 
       await launchUrl(email);
-    }
-    catch(e) {
-      debugPrint(e.toString());
+    } catch (e) {
+      print(e.toString());
     }
   }
 
@@ -68,38 +63,36 @@ class UrlLauncherService
   }
 
   Future launchEmail() async {
-    try
-    {
+    try {
       Uri email = Uri(
         scheme: 'mailto',
         path: "abcd@gmail.com",
         queryParameters: {
           'subject': "Testing subject",
-          'body' : "",
+          'body': "",
         },
       );
 
       await launchUrl(email);
-    }
-    catch(e) {
+    } catch (e) {
       print(e.toString());
     }
   }
+
   openMap() async {
     const String lat = "42.3540";
     const String lng = "71.0586";
     const String mapUrl = "geo:$lat,$lng";
     if (await canLaunch(mapUrl)) {
-    await launch(mapUrl);
+      await launch(mapUrl);
     } else {
-    throw "Couldn't launch Map";
+      throw "Couldn't launch Map";
     }
   }
 
   // for desktops
   dynamic openDirectory() async {
-    try
-    {
+    try {
       const String directory = "D:\Python310\libs";
       final Uri uri = Uri.file(directory);
 
@@ -109,10 +102,8 @@ class UrlLauncherService
       if (!await launchUrl(uri)) {
         throw 'Could not launch $uri';
       }
-    }
-    catch(e) {
-      debugPrint(e.toString());
+    } catch (e) {
+      print(e.toString());
     }
   }
-
 }

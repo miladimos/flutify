@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class DrawerWithAnimation extends StatelessWidget {
-  const DrawerWithAnimation({super.key});
+class DrawerTwo extends StatelessWidget {
+  const DrawerTwo({super.key});
 
   @override
   Widget build(BuildContext context) {
