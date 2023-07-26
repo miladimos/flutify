@@ -6,6 +6,7 @@ import 'package:flutify/app/pages/integrations/integration_page.dart';
 import 'package:flutify/app/pages/ui/authentication/authentication_page.dart';
 import 'package:flutify/app/pages/ui/music_player/music_player_page.dart';
 import 'package:flutify/app/pages/ui/profile/profile_page.dart';
+import 'package:flutify/app/pages/ui/test_page.dart';
 import 'package:flutify/app/pages/widgets/widgets_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -82,7 +83,7 @@ class HomePage extends GetView<HomePageController> {
                           title: "Dashboard",
                           subtitle: "Collection of Dashboard ui",
                           icon: Icons.email_outlined,
-                          onTap: () => {},
+                          onTap: () => Get.to(TestPage()),
                         ),
                         ListTileItemWidget(
                           title: "Onboarding",

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:qr_flutter/qr_flutter.dart';
 
 class QrCodePage extends StatefulWidget {
   const QrCodePage({super.key});
@@ -15,7 +16,13 @@ class _QrCodePageState extends State<QrCodePage> {
         title: const Text('QrCode'),
         elevation: 4,
       ),
-      body: Center(child: Text('QrCode')),
+      body: Center(
+        child: QrImageView(
+          data: '1234567890',
+          version: QrVersions.auto,
+          size: 200.0,
+        ),
+      ),
     );
   }
 }

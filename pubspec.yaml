@@ -42,7 +42,10 @@ dependencies:
   percent_indicator: ^4.2.3
   flutter_screenutil:
   sleek_circular_slider:
-
+  badges: 
+  qr_flutter:
+  lottie:
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter
