@@ -45,7 +45,13 @@ dependencies:
   badges: 
   qr_flutter:
   lottie:
-  
+  liquid_pull_to_refresh:
+  count_down_time:
+  persian_number_utility:
+  file_picker: 
+  dropdown_search: 
+  flutter_animate:
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

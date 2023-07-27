@@ -1,4 +1,6 @@
+import 'package:flutify/app/pages/about/ui/about_page.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class DrawerWidget extends StatelessWidget {
   const DrawerWidget({super.key});
@@ -8,7 +10,7 @@ class DrawerWidget extends StatelessWidget {
     return Drawer(
       child: ListView(
         padding: EdgeInsets.zero,
-        children: const [
+        children: [
           ListTile(
             title: Text("Source Code"),
             leading: Icon(Icons.source),
@@ -18,9 +20,14 @@ class DrawerWidget extends StatelessWidget {
             leading: Icon(Icons.light_mode),
             trailing: Switch(value: false, onChanged: null),
           ),
+          ListTile(
+            title: Text("About"),
+            leading: Icon(Icons.info),
+            onTap: () => Get.to(AboutPage()),
+          ),
           AboutListTile(
-            icon: Icon(Icons.info),
-            child: Text("About Fluttify"),
+            icon: Icon(Icons.verified),
+            child: Text("Fluttify"),
             applicationName: 'Fluttify - flutter kit',
             applicationVersion: '0.1.0',
           )

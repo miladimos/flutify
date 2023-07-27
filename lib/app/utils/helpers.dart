@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:path_provider/path_provider.dart';
 
 class Helpers {
   static Future navigateToPage(BuildContext context, page) async {
@@ -73,5 +76,16 @@ class Helpers {
   //         ),
   //       ) ??
   //       false; //if showDialouge had returned null, then return false
+  // }
+
+  // static Future<File> generateVideoThumbnail(String path) async {
+  //   final filename = await VideoThumbnail.thumbnailFile(
+  //     video: path,
+  //     thumbnailPath: (await getTemporaryDirectory()).path,
+  //     imageFormat: ImageFormat.WEBP,
+  //     quality: 100,
+  //   );
+  //   File file = File(filename!);
+  //   return file;
   // }
 }

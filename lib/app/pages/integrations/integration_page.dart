@@ -3,6 +3,7 @@ import 'package:flutify/app/pages/integrations/barcode/barcode_page.dart';
 import 'package:flutify/app/pages/integrations/check_internet_connectivity/check_internet_connectivity.dart';
 import 'package:flutify/app/pages/integrations/databases/databases_page.dart';
 import 'package:flutify/app/pages/integrations/face_id/face_id_page.dart';
+import 'package:flutify/app/pages/integrations/file_picker/file_picker_page.dart';
 import 'package:flutify/app/pages/integrations/fingerprint/fingerprint_page.dart';
 import 'package:flutify/app/pages/integrations/firebase/firebase_page.dart';
 import 'package:flutify/app/pages/integrations/internationalization/internationalization_page.dart';
@@ -52,6 +53,12 @@ class IntegrationPage extends StatelessWidget {
         subtitle: "Instagram ui clone",
         icon: Icons.login,
         onTap: () => Get.to(SupabasePage()),
+      ),
+      ListTileItemWidget(
+        title: 'File picker',
+        subtitle: "File picker",
+        icon: Icons.login,
+        onTap: () => Get.to(FilePickerPage()),
       ),
       ListTileItemWidget(
         title: 'Local Notifications',
