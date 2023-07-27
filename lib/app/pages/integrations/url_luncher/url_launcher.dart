@@ -17,7 +17,11 @@ class _UrlLauncherState extends State<UrlLauncher> {
       ),
       body: SafeArea(
         child: Column(
-          children: [],
+          children: [
+            ListTile(
+              title: Text("SMS"),
+            )
+          ],
         ),
       ),
     );

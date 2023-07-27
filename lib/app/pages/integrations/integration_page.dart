@@ -1,6 +1,7 @@
 import 'package:flutify/app/pages/home/ui/widgets/list_tile_item_widget.dart';
 import 'package:flutify/app/pages/integrations/barcode/barcode_page.dart';
 import 'package:flutify/app/pages/integrations/check_internet_connectivity/check_internet_connectivity.dart';
+import 'package:flutify/app/pages/integrations/clipboard/clipboard_page.dart';
 import 'package:flutify/app/pages/integrations/databases/databases_page.dart';
 import 'package:flutify/app/pages/integrations/face_id/face_id_page.dart';
 import 'package:flutify/app/pages/integrations/file_picker/file_picker_page.dart';
@@ -59,6 +60,12 @@ class IntegrationPage extends StatelessWidget {
         subtitle: "File picker",
         icon: Icons.login,
         onTap: () => Get.to(FilePickerPage()),
+      ),
+      ListTileItemWidget(
+        title: 'Clipboard',
+        subtitle: "Clipboard functionality",
+        icon: Icons.copy,
+        onTap: () => Get.to(ClipboardPage()),
       ),
       ListTileItemWidget(
         title: 'Local Notifications',
