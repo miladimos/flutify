@@ -64,9 +64,10 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
-  assets:
-    - assets/images/
+  assets:    
+    - assets/images/login_seven/background.png  
     - assets/images/login_five/background.jpg
+
 
 
 

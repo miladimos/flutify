@@ -2,6 +2,7 @@ import 'package:flutify/app/pages/home/ui/widgets/list_tile_item_widget.dart';
 import 'package:flutify/app/pages/ui/authentication/login_five/login_five_page.dart';
 import 'package:flutify/app/pages/ui/authentication/login_four/login_four_page.dart';
 import 'package:flutify/app/pages/ui/authentication/login_one/login_one_page.dart';
+import 'package:flutify/app/pages/ui/authentication/login_seven/login_seven_page.dart';
 import 'package:flutify/app/pages/ui/authentication/login_six/login_six_page.dart';
 import 'package:flutify/app/pages/ui/authentication/login_three/login_three_page.dart';
 import 'package:flutify/app/pages/ui/authentication/login_two/login_two_page.dart';
@@ -66,6 +67,14 @@ class AuthenticationPage extends StatelessWidget {
             trailing: Icon(Icons.arrow_forward),
             onTap: () => Get.to(
               LoginSixPage(),
+            ),
+          ),
+          ListTileItemWidget(
+            title: "Login 7",
+            icon: Icons.email_outlined,
+            trailing: Icon(Icons.arrow_forward),
+            onTap: () => Get.to(
+              LoginSevenPage(),
             ),
           ),
         ],
