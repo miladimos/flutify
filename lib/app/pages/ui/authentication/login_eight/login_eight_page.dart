@@ -1,7 +1,4 @@
-import 'package:flutify/app/pages/ui/authentication/login_eight/register_eight_page.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:get/get.dart';
 
 class LoginEightPage extends StatefulWidget {
   const LoginEightPage({super.key});
@@ -26,7 +23,7 @@ class _LoginEightPageState extends State<LoginEightPage> {
                 height: 400,
                 decoration: BoxDecoration(
                   color: Colors.yellow.shade700,
-                  borderRadius: BorderRadius.only(
+                  borderRadius: const BorderRadius.only(
                     bottomLeft: Radius.circular(150),
                     bottomRight: Radius.circular(150),
                   ),
@@ -36,7 +33,7 @@ class _LoginEightPageState extends State<LoginEightPage> {
                     Container(
                       width: double.infinity,
                       margin: EdgeInsets.only(top: 50, left: 15),
-                      child: Text(
+                      child: const Text(
                         "Welcome to",
                         style: TextStyle(
                           fontSize: 20,
@@ -48,7 +45,7 @@ class _LoginEightPageState extends State<LoginEightPage> {
                     Container(
                       width: double.infinity,
                       margin: EdgeInsets.only(left: 15, bottom: 5, top: 5),
-                      child: Text(
+                      child: const Text(
                         "Application",
                         style: TextStyle(
                           fontSize: 30,
@@ -60,7 +57,7 @@ class _LoginEightPageState extends State<LoginEightPage> {
                     Container(
                       width: double.infinity,
                       margin: EdgeInsets.only(bottom: 10, left: 15),
-                      child: Text(
+                      child: const Text(
                         "Login to Continue",
                         style: TextStyle(
                           fontSize: 20,
@@ -76,7 +73,7 @@ class _LoginEightPageState extends State<LoginEightPage> {
                         color: Colors.black12,
                         borderRadius: BorderRadius.circular(25),
                       ),
-                      child: TextField(
+                      child: const TextField(
                         decoration: InputDecoration(
                           hintText: "Email",
                           border: InputBorder.none,
@@ -159,22 +156,22 @@ class _LoginEightPageState extends State<LoginEightPage> {
                         vertical: 35,
                       ),
                       child: ConstrainedBox(
-                        constraints:
-                            BoxConstraints.tightFor(width: double.infinity),
+                        constraints: const BoxConstraints.tightFor(
+                            width: double.infinity),
                         child: ElevatedButton(
-                          onPressed: () => Get.to(RegisterEightPage()),
-                          child: Text(
+                          onPressed: () => {},
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.yellow.shade600,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(25),
+                            ),
+                          ),
+                          child: const Text(
                             "Register",
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.yellow.shade600,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(25),
                             ),
                           ),
                         ),

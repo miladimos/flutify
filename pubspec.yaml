@@ -51,7 +51,9 @@ dependencies:
   file_picker: 
   dropdown_search: 
   flutter_animate:
-
+  flutter_staggered_grid_view:
+  flutter_masonry_view:
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter

@@ -1,5 +1,6 @@
 import 'package:flutify/app/pages/full_apps/bmi_calculator/bmi_calculator.dart';
 import 'package:flutify/app/pages/full_apps/dating/dating_page.dart';
+import 'package:flutify/app/pages/full_apps/gallery/gallery_page.dart';
 import 'package:flutify/app/pages/full_apps/instagram/instagram_page.dart';
 import 'package:flutify/app/pages/full_apps/notes/notes_page.dart';
 import 'package:flutify/app/pages/full_apps/painter/painter_page.dart';
@@ -41,6 +42,12 @@ class FullAppsPage extends StatelessWidget {
         subtitle: "Signal Chat ui clone",
         icon: Icons.login,
         onTap: () => Get.to(SignalPage()),
+      ),
+      ListTileItemWidget(
+        title: 'Gallery',
+        subtitle: "photo gallery app",
+        icon: Icons.login,
+        onTap: () => Get.to(GalleryPage()),
       ),
       ListTileItemWidget(
         title: 'Covid',
