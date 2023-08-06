@@ -35,6 +35,7 @@ dependencies:
   webview_flutter:
   auto_size_text:
   fl_chart:
+  camera: 
   flutter_svg:
   percent_indicator: 
   flutter_screenutil:

@@ -99,7 +99,7 @@ class IntegrationPage extends StatelessWidget {
       // ),
       ListTileItemWidget(
         title: 'QRCode',
-        subtitle: "Instagram ui clone",
+        subtitle: "qrcode generator and scanner",
         icon: Icons.qr_code,
         onTap: () => Get.to(QrCodePage()),
       ),
