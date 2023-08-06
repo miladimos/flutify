@@ -8,6 +8,7 @@ import 'package:flutify/app/pages/full_apps/shop_bag/shop_bag_page.dart';
 import 'package:flutify/app/pages/full_apps/signal/signal_page.dart';
 import 'package:flutify/app/pages/full_apps/telegramx/telegramx_page.dart';
 import 'package:flutify/app/pages/full_apps/threads/threads_page.dart';
+import 'package:flutify/app/pages/full_apps/timer/timer_page.dart';
 import 'package:flutify/app/pages/home/ui/widgets/list_tile_item_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -97,6 +98,12 @@ class FullAppsPage extends StatelessWidget {
         icon: Icons.login,
         onTap: () => Get.to(PainterPage()),
       ),
+      // ListTileItemWidget(
+      //   title: 'Timer',
+      //   subtitle: "timer app",
+      //   icon: Icons.login,
+      //   onTap: () => Get.to(TimerPage()),
+      // ),
     ],
   );
 

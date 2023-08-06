@@ -14,6 +14,10 @@ class ChangeLogWidget extends StatelessWidget {
             "Changelogs:",
             style: TextStyle(fontSize: 16),
           ),
+          Text(
+            "v0.1.0",
+            style: TextStyle(fontSize: 16),
+          ),
         ],
       ),
     );

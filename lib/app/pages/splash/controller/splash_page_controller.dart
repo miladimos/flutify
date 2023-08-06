@@ -5,6 +5,6 @@ class SplashPageController extends GetxController {
   void onInit() {
     super.onInit();
 
-    Future.delayed(Duration(seconds: 3), () => {Get.toNamed('/home')});
+    Future.delayed(Duration(seconds: 3), () => {Get.offAndToNamed('/home')});
   }
 }

@@ -5,8 +5,7 @@ import 'package:flutify/app/pages/home/ui/widgets/list_tile_item_widget.dart';
 import 'package:flutify/app/pages/integrations/integration_page.dart';
 import 'package:flutify/app/pages/ui/authentication/authentication_page.dart';
 import 'package:flutify/app/pages/ui/music_player/music_player_page.dart';
-import 'package:flutify/app/pages/ui/profile/profile_page.dart';
-import 'package:flutify/app/pages/ui/test_page.dart';
+import 'package:flutify/app/pages/ui/onboarding/onboarding_page.dart';
 import 'package:flutify/app/pages/widgets/widgets_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -62,47 +61,48 @@ class HomePage extends GetView<HomePageController> {
                           onTap: () => Get.to(const AuthenticationPage()),
                         ),
                         ListTileItemWidget(
-                          title: "Profile",
-                          subtitle: "Collection of Profile ui",
-                          icon: Icons.email_outlined,
-                          onTap: () => Get.to(const ProfilePage()),
-                        ),
-                        ListTileItemWidget(
                           title: "Music Player",
                           subtitle: "Collection of music player ui",
                           icon: Icons.email_outlined,
                           onTap: () => Get.to(const MusicPlayerPage()),
                         ),
                         ListTileItemWidget(
-                          title: "Settings",
-                          subtitle: "Collection of Settings ui",
-                          icon: Icons.email_outlined,
-                          onTap: () => {},
-                        ),
-                        ListTileItemWidget(
-                          title: "Dashboard",
-                          subtitle: "Collection of Dashboard ui",
-                          icon: Icons.email_outlined,
-                          onTap: () => Get.to(TestPage()),
-                        ),
-                        ListTileItemWidget(
                           title: "Onboarding",
                           subtitle: "Collection of Onboarding ui",
                           icon: Icons.email_outlined,
-                          onTap: () => {},
+                          onTap: () => OnboardingPage(),
                         ),
-                        ListTileItemWidget(
-                          title: "Splash",
-                          subtitle: "Collection of Splash ui",
-                          icon: Icons.email_outlined,
-                          onTap: () => {},
-                        ),
-                        ListTileItemWidget(
-                          title: "Error",
-                          subtitle: "Collection of Errors ui",
-                          icon: Icons.email_outlined,
-                          onTap: () => {},
-                        ),
+                        // ListTileItemWidget(
+                        //   title: "Profile",
+                        //   subtitle: "Collection of Profile ui",
+                        //   icon: Icons.email_outlined,
+                        //   onTap: () => Get.to(const ProfilePage()),
+                        // ),
+                        // ListTileItemWidget(
+                        //   title: "Settings",
+                        //   subtitle: "Collection of Settings ui",
+                        //   icon: Icons.email_outlined,
+                        //   onTap: () => {},
+                        // ),
+                        // ListTileItemWidget(
+                        //   title: "Dashboard",
+                        //   subtitle: "Collection of Dashboard ui",
+                        //   icon: Icons.email_outlined,
+                        //   onTap: () => Get.to(TestPage()),
+                        // ),
+
+                        // ListTileItemWidget(
+                        //   title: "Splash",
+                        //   subtitle: "Collection of Splash ui",
+                        //   icon: Icons.email_outlined,
+                        //   onTap: () => {},
+                        // ),
+                        // ListTileItemWidget(
+                        //   title: "Error",
+                        //   subtitle: "Collection of Errors ui",
+                        //   icon: Icons.email_outlined,
+                        //   onTap: () => {},
+                        // ),
                       ],
                     ),
                     WidgetsPage().listViewItems,

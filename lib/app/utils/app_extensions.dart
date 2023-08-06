@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-extension RouterExtention on BuildContext {
+extension RouterExtension on BuildContext {
   toNamed(String name, {Object? args}) {
     return Navigator.of(this).pushNamed(name, arguments: args);
   }

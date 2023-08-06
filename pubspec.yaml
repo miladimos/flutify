@@ -1,9 +1,7 @@
 name: flutify
-description: A flutify flutter project.
+description: a flutter app for flutter developers
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
-
-
-version: 1.0.0+1
+version: 0.1.0
 
 environment:
   sdk: '>=3.0.5 <4.0.0'
@@ -23,7 +21,7 @@ dependencies:
   dio: 
   image_picker:
   permission_handler:
-  connectivity_plus: ^4.0.1
+  connectivity_plus: 
   shared_preferences:  
   shimmer:
   flutter_localizations:
@@ -36,10 +34,9 @@ dependencies:
   flutter_local_notifications: 
   webview_flutter:
   auto_size_text:
-  device_info_plus:
   fl_chart:
   flutter_svg:
-  percent_indicator: ^4.2.3
+  percent_indicator: 
   flutter_screenutil:
   sleek_circular_slider:
   badges: 
@@ -53,22 +50,26 @@ dependencies:
   flutter_animate:
   flutter_staggered_grid_view:
   flutter_masonry_view:
+  concentric_transition:
+  introduction_screen:
+  flutter_pw_validator:
   
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_launcher_icons: ^0.13.1
-
-
-  flutter_lints: ^2.0.0
+  flutter_launcher_icons: ^0.13.1  
+  flutter_lints: ^2.0.2
 
 
 flutter:
   uses-material-design: true
+  generate: true
 
   assets:    
     - assets/images/login_seven/background.png  
     - assets/images/login_five/background.jpg
+    - assets/images/ir_flag.svg
+    - assets/images/us_flag.svg
 
 
 

@@ -82,15 +82,23 @@ class ShopBagPage extends StatelessWidget {
                   margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                   child: GridView.builder(
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 2,
-                        mainAxisSpacing: 20,
-                        crossAxisSpacing: 20,
-                        childAspectRatio: 0.75),
+                      crossAxisCount: 2,
+                      mainAxisSpacing: 20,
+                      crossAxisSpacing: 20,
+                      childAspectRatio: 0.75,
+                    ),
                     itemCount: products.length,
                     itemBuilder: (context, index) {
                       return GestureDetector(
                         onTap: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => ShopBagProductDetail(product: products[index],)));
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ShopBagProductDetail(
+                                product: products[index],
+                              ),
+                            ),
+                          );
                         },
                         child: Container(
                           child: Column(
@@ -104,7 +112,7 @@ class ShopBagPage extends StatelessWidget {
                                     borderRadius: BorderRadius.circular(8),
                                   ),
                                   child: Hero(
-                                    tag: "{$products[index].id}",
+                                    tag: products[index].id,
                                     child: Image.asset(
                                         "assets/images/shop_bag/bag_2.png"),
                                   ),

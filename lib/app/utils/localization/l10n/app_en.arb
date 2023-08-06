@@ -1,0 +1,11 @@
+{
+  "@@locale": "en",
+  "title": "Internationalization",
+  "@title": {
+    "description": ""
+  },
+  "helloWorld": "Hello World!",
+  "@helloWorld": {
+    "description": "The conventional newborn programmer greeting"
+  }
+}
