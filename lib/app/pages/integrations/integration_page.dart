@@ -115,12 +115,12 @@ class IntegrationPage extends StatelessWidget {
       //   icon: Icons.login,
       //   onTap: () => Get.to(MultipleThemePage()),
       // ),
-      ListTileItemWidget(
-        title: 'Internationalization',
-        subtitle: "Instagram ui clone",
-        icon: Icons.language,
-        onTap: () => Get.to(InternationalizationPage()),
-      ),
+      // ListTileItemWidget(
+      //   title: 'Internationalization',
+      //   subtitle: "Instagram ui clone",
+      //   icon: Icons.language,
+      //   onTap: () => Get.to(InternationalizationPage()),
+      // ),
       // ListTileItemWidget(
       //   title: 'Signature Pad',
       //   subtitle: "Instagram ui clone",

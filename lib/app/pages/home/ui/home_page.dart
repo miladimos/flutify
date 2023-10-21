@@ -6,6 +6,7 @@ import 'package:flutify/app/pages/integrations/integration_page.dart';
 import 'package:flutify/app/pages/ui/authentication/authentication_page.dart';
 import 'package:flutify/app/pages/ui/music_player/music_player_page.dart';
 import 'package:flutify/app/pages/ui/onboarding/onboarding_page.dart';
+import 'package:flutify/app/pages/ui/wallet/wallet_one/wallet_one_page.dart';
 import 'package:flutify/app/pages/widgets/widgets_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -72,12 +73,12 @@ class HomePage extends GetView<HomePageController> {
                           icon: Icons.email_outlined,
                           onTap: () => OnboardingPage(),
                         ),
-                        // ListTileItemWidget(
-                        //   title: "Profile",
-                        //   subtitle: "Collection of Profile ui",
-                        //   icon: Icons.email_outlined,
-                        //   onTap: () => Get.to(const ProfilePage()),
-                        // ),
+                        ListTileItemWidget(
+                          title: "Wallet",
+                          subtitle: "Collection of Profile ui",
+                          icon: Icons.email_outlined,
+                          onTap: () => Get.to(const WalletOnePage()),
+                        ),
                         // ListTileItemWidget(
                         //   title: "Settings",
                         //   subtitle: "Collection of Settings ui",
